@@ -1,2 +1,2 @@
 # Cosmos-Rush
-<img width="740" height="296" alt="image" src="https://github.com/user-attachments/assets/138dfff3-ac59-47a0-b3eb-2866844bf6d7" />
+<img width="2170" height="725" alt="image" src="https://github.com/user-attachments/assets/1cf4b37c-745d-4be3-ba36-22ca873c5992" />
