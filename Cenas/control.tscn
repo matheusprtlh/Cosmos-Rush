@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://wsrfx3m2y8qn"]
+
+[node name="Control" type="Control" unique_id=1044239025]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=384411324]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

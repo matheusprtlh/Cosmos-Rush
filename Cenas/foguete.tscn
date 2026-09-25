@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://xvnwmqqgusp7"]
+
+[ext_resource type="Texture2D" uid="uid://cokbr657m3b3e" path="res://TileMaps/rocketl.png" id="1_4v2g6"]
+[ext_resource type="Script" uid="uid://q0s4dyner4uo" path="res://Cenas/foguete.gd" id="1_jyeai"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebum8"]
+size = Vector2(20, 28)
+
+[node name="FogueteMarte" type="Area2D" unique_id=1931852071]
+script = ExtResource("1_jyeai")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2064746854]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_ebum8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1384680400]
+position = Vector2(0, -4)
+texture = ExtResource("1_4v2g6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://da1svbwyp6555"]
+
+[ext_resource type="Script" uid="uid://dh7a1blnb47xs" path="res://laser.gd" id="1_6vqwg"]
+[ext_resource type="Texture2D" uid="uid://cff04e6woi501" path="res://Cenas/laser.png" id="1_fn5yt"]
+[ext_resource type="AudioStream" uid="uid://cwrkqas6i6dpk" path="res://sons_sem_atraso/lasersound.wav" id="3_g6b45"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oes6l"]
+size = Vector2(47, 30.5)
+
+[node name="Laser" type="Area2D" unique_id=1302986338]
+scale = Vector2(0.24000178, 0.24000178)
+script = ExtResource("1_6vqwg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=967217769]
+texture = ExtResource("1_fn5yt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=666961103]
+position = Vector2(-0.5, -0.25)
+shape = SubResource("RectangleShape2D_oes6l")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=32594072]
+stream = ExtResource("3_g6b45")
+autoplay = true

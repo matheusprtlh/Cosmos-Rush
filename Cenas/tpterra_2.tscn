@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://tni125ka8e88"]
+
+[ext_resource type="Script" uid="uid://buv5ohuwhlvvb" path="res://Scripts/tpterra_2.gd" id="1_aps0u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebum8"]
+size = Vector2(47, 168)
+
+[node name="tpterra2" type="Area2D" unique_id=918677113]
+script = ExtResource("1_aps0u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=546699597]
+position = Vector2(13.5, 74)
+shape = SubResource("RectangleShape2D_ebum8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://c3bdma7iokynn"]
+
+[ext_resource type="Texture2D" uid="uid://cqt6nnh2beyxh" path="res://Imagens/FreeCatCharacterAnimations/2_Cat_Run-Sheet.png" id="1_gov4d"]
+[ext_resource type="Script" uid="uid://b5yuhwtt5umm1" path="res://Scripts/loading.gd" id="1_pg7vo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg7vo"]
+atlas = ExtResource("1_gov4d")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1l04a"]
+atlas = ExtResource("1_gov4d")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecfth"]
+atlas = ExtResource("1_gov4d")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wc73m"]
+atlas = ExtResource("1_gov4d")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvgud"]
+atlas = ExtResource("1_gov4d")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypwvy"]
+atlas = ExtResource("1_gov4d")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m23s6"]
+atlas = ExtResource("1_gov4d")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25ta2"]
+atlas = ExtResource("1_gov4d")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxij0"]
+atlas = ExtResource("1_gov4d")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odase"]
+atlas = ExtResource("1_gov4d")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ebum8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg7vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1l04a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecfth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wc73m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvgud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypwvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m23s6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25ta2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxij0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odase")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Loading" type="ColorRect" unique_id=1957329439]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_pg7vo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=125896163]
+position = Vector2(1067.9999, 571.99994)
+scale = Vector2(3.9200003, 3.9200003)
+sprite_frames = SubResource("SpriteFrames_ebum8")
+autoplay = "default"
+
+[node name="Timer" type="Timer" parent="." unique_id=772007364]
+wait_time = 2.0
+one_shot = true
+autostart = true

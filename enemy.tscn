@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dboeydy7p6nf4"]
+
+[ext_resource type="Script" uid="uid://c5umv3fcdey0d" path="res://enemy.gd" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://bcjolwxtjfmos" path="res://sickle_walk.png" id="2_4gyqm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
+size = Vector2(14, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi2p4"]
+atlas = ExtResource("2_4gyqm")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iifgy"]
+atlas = ExtResource("2_4gyqm")
+region = Rect2(128, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epg4t"]
+atlas = ExtResource("2_4gyqm")
+region = Rect2(256, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yqyl"]
+atlas = ExtResource("2_4gyqm")
+region = Rect2(384, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wujgv"]
+atlas = ExtResource("2_4gyqm")
+region = Rect2(512, 0, 128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qi2p4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi2p4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iifgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epg4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yqyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wujgv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iifgy"]
+size = Vector2(15.000004, 17.500006)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=251804280]
+script = ExtResource("1_7k104")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1023433815]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_4gyqm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1793427597]
+position = Vector2(-1, 0)
+scale = Vector2(0.64000016, 0.64000016)
+sprite_frames = SubResource("SpriteFrames_qi2p4")
+autoplay = "default"
+frame_progress = 0.17436373
+
+[node name="WallCheck" type="RayCast2D" parent="." unique_id=724425667]
+position = Vector2(0, -8)
+target_position = Vector2(11, 0)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1698781523]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2144110746]
+position = Vector2(1.0000002, -0.50000024)
+scale = Vector2(1.1999997, 1.1999997)
+shape = SubResource("RectangleShape2D_iifgy")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

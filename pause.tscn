@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dw7ddrl7y8613"]
+
+[ext_resource type="Texture2D" uid="uid://sauvex1hv5bw" path="res://pause.png" id="1_45vjg"]
+[ext_resource type="Script" uid="uid://chr7gdgb8snls" path="res://pause.gd" id="1_w2ufp"]
+[ext_resource type="Texture2D" uid="uid://35p0mnl2qbkm" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Play_Button_02.png" id="2_8u653"]
+[ext_resource type="Texture2D" uid="uid://ub0qwukmo2v" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Home_Button_02.png" id="2_m0a22"]
+[ext_resource type="Texture2D" uid="uid://dtpgho52d0qe3" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Play_Button_03.png" id="3_bwtow"]
+[ext_resource type="Texture2D" uid="uid://c0ej5u54qe1po" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Home_Button_03.png" id="3_w2ufp"]
+[ext_resource type="Texture2D" uid="uid://pswuhvepte30" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Play_Button_01.png" id="4_05lnj"]
+[ext_resource type="Texture2D" uid="uid://fpbqc5mbo1ac" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Home_Button_01.png" id="4_21xor"]
+[ext_resource type="Texture2D" uid="uid://cs40a57lrabty" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Skip_Button_02.png" id="8_a1xvq"]
+[ext_resource type="Texture2D" uid="uid://ba8aaawywf4sj" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Skip_Button_03.png" id="9_o8bi2"]
+[ext_resource type="Texture2D" uid="uid://de5hb2g7c10fg" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Skip_Button_01.png" id="10_ur7s8"]
+
+[node name="Pause" type="Control" unique_id=2058679960]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_w2ufp")
+
+[node name="CaixaPause" type="Control" parent="." unique_id=447300321]
+anchors_preset = 0
+offset_left = -527.0
+offset_top = -311.0
+offset_right = 625.0
+offset_bottom = 337.0
+
+[node name="TextureRect" type="TextureRect" parent="CaixaPause" unique_id=112441383]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 320.0
+offset_top = 100.0
+offset_right = 384.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(6.2, 6.2)
+texture = ExtResource("1_45vjg")
+
+[node name="Menu" type="TextureButton" parent="CaixaPause" unique_id=678198809]
+layout_mode = 0
+offset_left = 962.0
+offset_top = 606.0
+offset_right = 1002.0
+offset_bottom = 646.0
+scale = Vector2(2.3200002, 2.3200002)
+texture_normal = ExtResource("2_m0a22")
+texture_pressed = ExtResource("3_w2ufp")
+texture_hover = ExtResource("4_21xor")
+
+[node name="Continue" type="TextureButton" parent="CaixaPause" unique_id=1554467207]
+layout_mode = 0
+offset_left = 1152.0
+offset_top = 608.0
+offset_right = 1192.0
+offset_bottom = 648.0
+scale = Vector2(2.2, 2.2)
+texture_normal = ExtResource("2_8u653")
+texture_pressed = ExtResource("3_bwtow")
+texture_hover = ExtResource("4_05lnj")
+
+[node name="Restart" type="TextureButton" parent="CaixaPause" unique_id=1890784025]
+layout_mode = 0
+offset_left = 1058.0001
+offset_top = 607.0
+offset_right = 1098.0001
+offset_bottom = 647.0
+scale = Vector2(2.283656, 2.283656)
+texture_normal = ExtResource("8_a1xvq")
+texture_pressed = ExtResource("9_o8bi2")
+texture_hover = ExtResource("10_ur7s8")
+
+[connection signal="pressed" from="CaixaPause/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="CaixaPause/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="CaixaPause/Restart" to="." method="_on_restart_pressed"]

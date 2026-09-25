@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://l6p2kl82rdyx"]
+
+[ext_resource type="Script" uid="uid://do3ds7dvsr0y5" path="res://tpmarte_2.gd" id="1_vutva"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0i88t"]
+size = Vector2(70, 221)
+
+[node name="tpmarte3" type="Area2D" unique_id=332397142]
+script = ExtResource("1_vutva")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1152984734]
+position = Vector2(25, 100.5)
+shape = SubResource("RectangleShape2D_0i88t")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

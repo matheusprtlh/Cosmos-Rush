@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://wjjaet5n6oat"]
+
+[ext_resource type="Texture2D" uid="uid://ub0qwukmo2v" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Home_Button_02.png" id="1_8u835"]
+[ext_resource type="Script" uid="uid://blla2o71457x7" path="res://game_over.gd" id="1_fkf4o"]
+[ext_resource type="Texture2D" uid="uid://cs40a57lrabty" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Skip_Button_02.png" id="1_k2vha"]
+[ext_resource type="Texture2D" uid="uid://bh3nh34shjy1s" path="res://Imagens/Gemini_Generated_Image_x67y9zx67y9zx67y.jpg" id="1_y26ei"]
+[ext_resource type="Texture2D" uid="uid://ba8aaawywf4sj" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Skip_Button_03.png" id="2_fkf4o"]
+[ext_resource type="Texture2D" uid="uid://c0ej5u54qe1po" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Home_Button_03.png" id="2_ftari"]
+[ext_resource type="Texture2D" uid="uid://de5hb2g7c10fg" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Skip_Button_01.png" id="3_3u7xm"]
+[ext_resource type="Texture2D" uid="uid://fpbqc5mbo1ac" path="res://Fundos/Clouds/Clouds 3/32x32 Blue Bubble Buttons/Buttons With Icons/Home_Button_01.png" id="3_28vn7"]
+
+[node name="GameOver" type="Control" unique_id=1337512302]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fkf4o")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1917895049]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.825
+anchor_bottom = 16.150002
+offset_bottom = -6.1035156e-05
+color = Color(0, 0, 0, 1)
+
+[node name="again" type="TextureButton" parent="." unique_id=789824016]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.745
+anchor_bottom = 16.082
+offset_left = 645.00006
+offset_top = 343.0
+offset_right = -472.8
+offset_bottom = -259.28003
+scale = Vector2(4.6800003, 4.6800003)
+texture_normal = ExtResource("1_k2vha")
+texture_pressed = ExtResource("2_fkf4o")
+texture_hover = ExtResource("3_3u7xm")
+
+[node name="quit" type="TextureButton" parent="." unique_id=121554086]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 327.0
+offset_top = 326.0
+offset_right = 359.0
+offset_bottom = 358.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.523567, 4.523567)
+texture_normal = ExtResource("1_8u835")
+texture_pressed = ExtResource("2_ftari")
+texture_hover = ExtResource("3_28vn7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=496767331]
+position = Vector2(577.00006, 182)
+scale = Vector2(0.556111, 0.556111)
+texture = ExtResource("1_y26ei")
+
+[connection signal="pressed" from="again" to="." method="_on_again_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
